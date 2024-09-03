@@ -4,13 +4,20 @@
 // 4 => -4, -3, -2, -1, 0, 1, 2, 3, 4
 // 2 => -2, -1, 0, 1, 2
 
-Console.WriteLine("Введите натуральное (целое положительное число) число");
+Console.WriteLine("Введите натуральное число (целое положительное число)");
 int num = Convert.ToInt32(Console.ReadLine());
 
-int count = -num; // num = num * -1
+if (num > 0)
+{
+    int count = -num; // num = num * -1
 
 while (count <= num)
 {
     Console.Write(count + " ");
     count++; //count = count + 1; //count += 1;
+}
+}
+else
+{
+    Console.WriteLine("Ошибка ввода!");
 }
